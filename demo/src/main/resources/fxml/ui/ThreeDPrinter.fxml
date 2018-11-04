@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"> 
+<children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="576.0" prefWidth="409.0" style="-fx-background-color: #92CDFB;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="95.0" prefWidth="409.0" text="3D PRINTERS ROOM">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="290.0" prefWidth="409.0" style="-fx-background-color: white;">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="102.0">
+                           <children>
+                              <JFXButton alignment="CENTER" contentDisplay="TOP" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: #B0C4DE;" text="OFF" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="30.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="LULZBOT MINI 2" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" top="-30.0" />
+                                       </padding>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: #1E90FF;" text="OFF" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="LULZBOT MINI 1" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" top="-30.0" />
+                                       </padding>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="102.0">
+                           <children>
+                              <JFXButton contentDisplay="TOP" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: #B0E0E6;" text="ON" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="MCOR ARCE" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" top="-30.0" />
+                                       </padding>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: #00BFFF;" text="OFF" textFill="WHITE">
+                                 <graphic>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="LULZBOT MINI 1" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" top="-30.0" />
+                                       </padding>
+                                    </Label>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="100.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="223.0" prefWidth="102.0">
+                           <children>
+                              <JFXButton contentDisplay="TOP" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: ADD8E6;" text="ON" textFill="WHITE">
+                                 <graphic>
+                                    <Label alignment="CENTER" contentDisplay="TOP" text="BJET 60 " textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" top="-30.0" />
+                                       </padding>
+                                    </Label>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: #87CEFA;" text="ON" textFill="WHITE">
+                                 <graphic>
+                                    <Label alignment="CENTER" text="LULZBOT MINI 1" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" top="-30.0" />
+                                       </padding>
+                                    </Label>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="100.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="223.0" prefWidth="102.0">
+                           <children>
+                              <JFXButton alignment="CENTER" contentDisplay="TOP" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: #87CEEB;" text="OFF" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="30.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="LASER CUT 1" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" top="-30.0" />
+                                       </padding>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" prefHeight="103.0" prefWidth="103.0" style="-fx-background-color: #87CEFA;" text="OFF" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="LASER CUT 2" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="10.0" top="-30.0" />
+                                       </padding>
+                                    </Label>
+                                 </graphic>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXButton prefHeight="88.0" prefWidth="218.0" style="-fx-background-color: #5264AE;" text="GENERATE REPORT" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="96.0" top="30.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox prefHeight="576.0" prefWidth="615.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="82.0" prefWidth="141.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="119.0" text="Choose Printer">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <JFXComboBox id="jfxComboBox1" prefWidth="200" promptText="Select list item">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                          <Label>
+                                              Printer 1
+                                          </Label>
+                                          <Label>
+                                              Printer 2
+                                          </Label>
+                                          <Label>
+                                              Printer 3
+                                          </Label>
+                                          <Label>
+                                              Printer 4
+                                          </Label>
+                                          <Label>
+                                              Printer 5
+                                          </Label>
+                                          <Label>
+                                              Printer 6
+                                          </Label>
+                                          <Label>
+                                              Printer 7
+                                          </Label>
+                                          <Label>
+                                              Printer 8
+                                          </Label>
+                                      </FXCollections>
+                                  </items>
+                              </JFXComboBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="130.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="119.0" text="From Date">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <JFXDatePicker />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="82.0" prefWidth="125.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="119.0" text="To Date">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <JFXDatePicker prefHeight="25.0" prefWidth="108.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="130.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="119.0" text="Choose Usage">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <JFXComboBox id="jfxComboBox2" prefWidth="200" promptText="Since">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                          <Label>
+                                              Last Maintanence
+                                          </Label>
+                                          <Label>
+                                              Life Time
+                                          </Label>
+
+                                      </FXCollections>
+                                  </items>
+                              </JFXComboBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="130.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="119.0" text="Choose Time">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <JFXComboBox id="jfxComboBox3" prefWidth="200" promptText="Daily">
+                                  <items>
+                                      <FXCollections fx:factory="observableArrayList">
+                                          <Label>
+                                              Hourly
+                                          </Label>
+                                          <Label>
+                                              Daily
+                                          </Label>
+                                          <Label>
+                                              Weekly
+                                          </Label>
+                                          <Label>
+                                              Monthly
+                                          </Label>
+                                          <Label>
+                                              Annually
+                                          </Label>
+                                      </FXCollections>
+                                  </items>
+                              </JFXComboBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <LineChart prefHeight="258.0" prefWidth="615.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <JFXTreeTableView prefHeight="272.0" prefWidth="615.0">
+                     <columns>
+                        <TreeTableColumn prefWidth="89.0" text="ASSET NAME" />
+                        <TreeTableColumn prefWidth="113.0" text="CURRENT PERIOD" />
+                        <TreeTableColumn prefWidth="126.0" text="TIME SINCE SERVICE" />
+                        <TreeTableColumn minWidth="5.0" prefWidth="124.0" text="SERVICE INTERVAL" />
+                        <TreeTableColumn prefWidth="105.0" text="TOTAL USEAGE" />
+                        <TreeTableColumn prefWidth="57.0" text="TAG" />
+                     </columns>
+                  </JFXTreeTableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="576.0" prefWidth="409.0" style="-fx-background-color: #92CDFB;">
+               <children>
+                  <Text fill="#5264ae" strokeType="OUTSIDE" strokeWidth="0.0" text="RFID Statistics" textAlignment="CENTER" wrappingWidth="399.7366828918457">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="30.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="35.0" prefWidth="409.0">
+                     <children>
+                        <JFXComboBox id="jfxComboBox" prefHeight="25.0" prefWidth="96.0" promptText="Select Time">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <Label>
+                                        Hourly
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontAwesomeIconView glyphName="STAR" size="1.5em" styleClass="custom-jfx-list-view-icon" />
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                    <Label>
+                                        Daily
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontAwesomeIconView glyphName="HEART" size="1.5em" styleClass="custom-jfx-list-view-icon" />
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                    <Label>
+                                        Weekly
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontAwesomeIconView glyphName="WARNING" size="1.5em" styleClass="custom-jfx-list-view-icon" />
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                    <Label>
+                                        Monthly
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontAwesomeIconView glyphName="UNIVERSITY" size="1.5em" styleClass="custom-jfx-list-view-icon" />
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                    <Label>
+                                        Yearly
+                                        <graphic>
+                                            <StackPane styleClass="custom-jfx-list-view-icon-container">
+                                                <FontAwesomeIconView glyphName="TABLET" size="1.5em" styleClass="custom-jfx-list-view-icon" />
+                                            </StackPane>
+                                        </graphic>
+                                    </Label>
+                                </FXCollections>
+                            </items>
+                            <validators>
+                                <RequiredFieldValidator message="Input Required!">
+                                    <FontAwesomeIconView glyphName="WARNING" styleClass="error-icon" />
+                                </RequiredFieldValidator>
+                            </validators>
+                           <HBox.margin>
+                              <Insets left="10.0" top="7.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXDatePicker defaultColor="#0512437d" prefHeight="28.0" prefWidth="144.0" promptText="From Date">
+                           <HBox.margin>
+                              <Insets left="29.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                        <JFXDatePicker defaultColor="#5264ae" prefHeight="28.0" prefWidth="110.0" promptText="To Date">
+                           <HBox.margin>
+                              <Insets left="29.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXDatePicker>
+                     </children>
+                  </HBox>
+                  <LineChart prefHeight="293.0" prefWidth="408.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </LineChart>
+                  <JFXButton buttonType="RAISED" prefHeight="88.0" prefWidth="218.0" style="-fx-background-color: #5264ae;" text="GENERATE REPORT" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="96.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox prefHeight="576.0" prefWidth="632.0">
+               <children>
+                  <JFXTreeTableView prefHeight="278.0" prefWidth="624.0">
+                     <columns>
+                        <TreeTableColumn minWidth="123.0" prefWidth="123.0" text="Day" />
+                        <TreeTableColumn minWidth="111.0" prefWidth="120.0" text="Date" />
+                        <TreeTableColumn minWidth="109.0" prefWidth="122.0" text="User" />
+                        <TreeTableColumn minWidth="121.0" prefWidth="121.0" text="Check-in Time" />
+                        <TreeTableColumn prefWidth="122.0" text="Check-out Time" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTreeTableView>
+                  <JFXTreeTableView prefHeight="279.0" prefWidth="624.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <columns>
+                        <TreeTableColumn prefWidth="98.0" text="Day" />
+                        <TreeTableColumn prefWidth="106.0" text="Date" />
+                        <TreeTableColumn prefWidth="107.0" text="User" />
+                        <TreeTableColumn prefWidth="119.0" text="Item" />
+                        <TreeTableColumn prefWidth="178.0" text="Check-out Time" />
+                     </columns>
+                  </JFXTreeTableView>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+   
+</StackPane>

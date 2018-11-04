@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0">
+   <children>
+      <HBox prefHeight="576.0" prefWidth="1024.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="HOME PAGE" wrappingWidth="414.8629608154297">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="30.0" />
+                     </VBox.margin>
+                  </Text>
+                  <ImageView fitHeight="379.0" fitWidth="555.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/C:/Personal%20Data/Penn%20State/Penn%20State%20Main/Semester%207/CMPSC%20483/JFoenix-master/demo/src/main/resources/Learning%20Factory%20black.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="30.0" top="30.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox prefHeight="576.0" prefWidth="409.0" style="-fx-background-color: #92CDFB;">
+               <HBox.margin>
+                  <Insets left="40.0" />
+                  
+               </HBox.margin>
+               <HBox prefHeight="189.0" prefWidth="409.0">
+                  <children>
+                     
+                     <JFXButton alignment="TOP_CENTER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="Checked In Today">
+                        <HBox.margin>
+                           <Insets left="40.0" top="30.0" />
+                        </HBox.margin>
+                     </JFXButton>
+                     <JFXButton alignment="TOP_CENTER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="Printers In Use">
+                        <HBox.margin>
+                           <Insets left="30.0" top="30.0" />
+                        </HBox.margin>
+                     </JFXButton>
+                  </children>
+               </HBox>
+               <HBox prefHeight="189.0" prefWidth="409.0">
+                  <children>
+                     <JFXButton alignment="TOP_CENTER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="Checked Out Today">
+                        <HBox.margin>
+                           <Insets left="40.0" top="30.0" />
+                        </HBox.margin>
+                     </JFXButton>
+                     <JFXButton alignment="TOP_CENTER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="Maintanence">
+                        <HBox.margin>
+                           <Insets left="30.0" top="30.0" />
+                        </HBox.margin>
+                     </JFXButton>
+                  </children>
+               </HBox>
+               <HBox prefHeight="189.0" prefWidth="409.0">
+                  <children>
+                     <LineChart prefHeight="158.0" prefWidth="330.0">
+                       <xAxis>
+                         <CategoryAxis prefHeight="30.0" prefWidth="353.0" side="BOTTOM" tickLabelFill="#006ef4" />
+                       </xAxis>
+                       <yAxis>
+                         <NumberAxis side="LEFT" />
+                       </yAxis>
+                        <HBox.margin>
+                           <Insets left="30.0" top="10.0" />
+                        </HBox.margin>
+                     </LineChart>
+                  </children>
+               </HBox>
+            </VBox>
+            
+         </children>
+      </HBox>
+   </children>
+</StackPane>
