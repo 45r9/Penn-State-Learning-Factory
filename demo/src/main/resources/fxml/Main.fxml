@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.transitions.hamburger.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import com.jfoenix.controls.JFXRippler?>
@@ -13,48 +19,63 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane fx:id="root" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <!-- Header -->
-    <BorderPane>
-        <top>
-            <VBox spacing="20">
-                <JFXToolbar>
-                    <leftItems>
-                        <JFXRippler maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
-                            <StackPane fx:id="titleBurgerContainer">
-                                <JFXHamburger fx:id="titleBurger">
-                                    <HamburgerBackArrowBasicTransition />
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+       <!-- Header -->
+       <BorderPane>
+           <top>
+               <VBox spacing="20">
+                  <children>
+                      <JFXToolbar>
+                          <leftItems>
+                              <JFXRippler maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
+                                 <control>
+                                     <StackPane fx:id="titleBurgerContainer">
+                                        <children>
+                                            <JFXHamburger fx:id="titleBurger">
+                                               <animation>
+                                                   <HamburgerBackArrowBasicTransition />
+                                               </animation>
+                                            </JFXHamburger>
+                                        </children>
+                                     </StackPane>
+                                 </control>
+                              </JFXRippler>
+                              <ImageView fitHeight="75.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <image>
+                                   <Image url="@../Penn%20State.png" />
+                                </image>
+                             </ImageView>
+                              <Label>Penn State Learning Factory</Label>
+                          </leftItems>
+                          <rightItems>
+                              <JFXRippler fx:id="optionsRippler" maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
+                                 <control>
+                                     <StackPane fx:id="optionsBurger">
+                                        <children>
+                                            <JFXHamburger styleClass="jfx-options-burger">
                                 </JFXHamburger>
-                            </StackPane>
-                        </JFXRippler>
-                        <Label>Penn State Learning Factory</Label>
-                    </leftItems>
-                    <rightItems>
-                        <JFXRippler fx:id="optionsRippler" maskType="CIRCLE" style="-fx-ripple-color:WHITE;">
-                            <StackPane fx:id="optionsBurger">
-                                <JFXHamburger styleClass="jfx-options-burger">
-                                </JFXHamburger>
-                            </StackPane>
-                        </JFXRippler>
-                    </rightItems>
-               <center>
-                  <ImageView fitHeight="75.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="file:/C:/Personal%20Data/Penn%20State/Penn%20State%20Main/Semester%207/CMPSC%20483/JFoenix-master/demo/src/main/resources/Penn%20State.png" />
-                     </image>
-                  </ImageView>
-               </center>
-                </JFXToolbar>
-            </VBox>
-        </top>
-
-        <!-- Content Area -->
-        <center>
-            <JFXDrawer fx:id="drawer" defaultDrawerSize="250" direction="LEFT">
-                <styleClass>
-                    <String fx:value="body" />
-                </styleClass>
-            </JFXDrawer>
-        </center>
-    </BorderPane>
+                                        </children>
+                                     </StackPane>
+                                 </control>
+                              </JFXRippler>
+                          </rightItems>
+                     <center>
+                        
+                     </center>
+                      </JFXToolbar>
+                  </children>
+               </VBox>
+           </top>
+   
+           <!-- Content Area -->
+           <center>
+               <JFXDrawer fx:id="drawer" defaultDrawerSize="250" direction="LEFT">
+                   <styleClass>
+                       <String fx:value="body" />
+                   </styleClass>
+               </JFXDrawer>
+           </center>
+       </BorderPane>
+   </children>
 </StackPane>
