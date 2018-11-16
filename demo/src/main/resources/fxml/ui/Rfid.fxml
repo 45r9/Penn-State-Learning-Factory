@@ -101,7 +101,7 @@
                         </JFXDatePicker>
                      </children>
                   </HBox>
-                  <LineChart prefHeight="293.0" prefWidth="408.0">
+                  <LineChart fx:id="graphview" prefHeight="293.0" prefWidth="408.0">
                     <xAxis>
                       <CategoryAxis side="BOTTOM" />
                     </xAxis>
@@ -112,37 +112,37 @@
                         <Insets top="20.0" />
                      </VBox.margin>
                   </LineChart>
-                  <JFXButton buttonType="RAISED" prefHeight="88.0" prefWidth="218.0" style="-fx-background-color: #5264ae;" text="GENERATE REPORT" textFill="WHITE">
+                  <JFXButton fx:id="reportGraph" buttonType="RAISED" prefHeight="88.0" prefWidth="218.0" style="-fx-background-color: #5264ae;" text="GENERATE REPORT" textFill="WHITE">
                      <VBox.margin>
                         <Insets left="96.0" top="10.0" />
                      </VBox.margin>
                   </JFXButton>
                </children>
             </VBox>
-            <VBox prefHeight="576.0" prefWidth="632.0">
+            <VBox prefHeight="576.0" prefWidth="1032.0">
                <children>
-                  <JFXTreeTableView prefHeight="278.0" prefWidth="624.0">
+                  <JFXTreeTableView fx:id="UserTableView" prefHeight="278.0" prefWidth="624.0">
                      <columns>
-                        <TreeTableColumn minWidth="123.0" prefWidth="123.0" text="Day" />
-                        <TreeTableColumn minWidth="111.0" prefWidth="120.0" text="Date" />
-                        <TreeTableColumn minWidth="109.0" prefWidth="122.0" text="User" />
-                        <TreeTableColumn minWidth="121.0" prefWidth="121.0" text="Check-in Time" />
-                        <TreeTableColumn prefWidth="122.0" text="Check-out Time" />
+                        <TreeTableColumn fx:id="DayColumn" minWidth="123.0" prefWidth="123.0" text="Day" />
+                        <TreeTableColumn fx:id="DateColumn" minWidth="111.0" prefWidth="120.0" text="Date" />
+                        <TreeTableColumn fx:id="UserColumn" minWidth="109.0" prefWidth="122.0" text="User" />
+                        <TreeTableColumn fx:id="CheckinColumn" minWidth="121.0" prefWidth="121.0" text="Check-in Time" />
+                        <TreeTableColumn fx:id="CheckoutColumn" prefWidth="122.0" text="Check-out Time" />
                      </columns>
                      <VBox.margin>
                         <Insets left="5.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </JFXTreeTableView>
-                  <JFXTreeTableView prefHeight="279.0" prefWidth="624.0">
+                  <JFXTreeTableView fx:id="ItemTableView" prefHeight="279.0" prefWidth="624.0">
                      <VBox.margin>
                         <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
                      </VBox.margin>
                      <columns>
-                        <TreeTableColumn prefWidth="98.0" text="Day" />
-                        <TreeTableColumn prefWidth="106.0" text="Date" />
-                        <TreeTableColumn prefWidth="107.0" text="User" />
-                        <TreeTableColumn prefWidth="119.0" text="Item" />
-                        <TreeTableColumn prefWidth="178.0" text="Check-out Time" />
+                        <TreeTableColumn fx:id="iDayColumn" prefWidth="98.0" text="Day"  />
+                        <TreeTableColumn fx:id="iDateColumn" prefWidth="106.0" text="Date" />
+                        <TreeTableColumn fx:id="iUserColumn" prefWidth="107.0" text="User" />
+                        <TreeTableColumn fx:id="ItemColumn" prefWidth="119.0" text="Item" />
+                        <TreeTableColumn fx:id="iCheckoutColumn" prefWidth="178.0" text="Check-out Time" resizable="false"/>
                      </columns>
                   </JFXTreeTableView>
                </children></VBox>
