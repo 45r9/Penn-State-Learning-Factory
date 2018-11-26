@@ -188,9 +188,9 @@
                                     <Insets left="10.0" top="20.0" />
                                  </VBox.margin>
                               </Label>
-                              <JFXComboBox id="jfxComboBox1" prefWidth="200" promptText="Select list item">
+                              <JFXComboBox fx:id="jfxComboBox1" prefWidth="200" promptText="Select list item">
                                   <items>
-                                      <FXCollections fx:factory="observableArrayList">
+                                      <FXCollections  fx:id="printerList" fx:factory="observableArrayList">
                                           <Label>
                                               Printer 1
                                           </Label>
@@ -315,12 +315,12 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <LineChart prefHeight="258.0" prefWidth="615.0">
+                  <LineChart fx:id="printerChart" prefHeight="258.0" prefWidth="615.0" title="Current Printer Usage">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" />
+                      <CategoryAxis label=" Time " fx:id="xAxis" side="BOTTOM" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" />
+                      <NumberAxis label="Vibration" fx:id="yAxis" side="LEFT" />
                     </yAxis>
                   </LineChart>
                   <JFXTreeTableView prefHeight="272.0" prefWidth="615.0">
