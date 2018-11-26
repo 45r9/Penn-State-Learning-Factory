@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+
 /**
  *
  * @author prate
@@ -23,8 +24,7 @@ public class ThreeDPrinterDemo extends Application{
         FlowPane main = new FlowPane();
         main.setVgap(20);
         main.setHgap(20);
-
-
+        
         StackPane pane = new StackPane();
         pane.getChildren().add(main);
         StackPane.setMargin(main, new Insets(100));
@@ -35,6 +35,7 @@ public class ThreeDPrinterDemo extends Application{
         stage.setTitle("JFX Button Demo");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
