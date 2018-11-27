@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -20,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="576.0" prefWidth="1024.0">
          <children>
@@ -52,13 +46,38 @@
                <children>
                   <HBox prefHeight="189.0" prefWidth="409.0">
                      <children>
-                        
-                        <JFXButton alignment="TOP_CENTER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="Checked In Today">
+                        <JFXButton contentDisplay="TOP" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #5264AE;" text="30" textFill="WHITE">
+                           <graphic>
+                              <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Checked In Today" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" top="-30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                           <font>
+                              <Font size="45.0" />
+                           </font>
                            <HBox.margin>
                               <Insets left="40.0" top="30.0" />
                            </HBox.margin>
                         </JFXButton>
-                        <JFXButton alignment="TOP_CENTER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="Printers In Use">
+                        <JFXButton contentDisplay="TOP" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #5264AE;" text="03" textFill="WHITE">
+                           <graphic>
+                              <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Printers In Use" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" top="-30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                           <font>
+                              <Font size="45.0" />
+                           </font>
                            <HBox.margin>
                               <Insets left="30.0" top="30.0" />
                            </HBox.margin>
@@ -67,12 +86,38 @@
                   </HBox>
                   <HBox prefHeight="189.0" prefWidth="409.0">
                      <children>
-                        <JFXButton alignment="TOP_CENTER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="Checked Out Today">
+                        <JFXButton contentDisplay="TOP" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #5264AE;" text="20" textFill="WHITE">
+                           <graphic>
+                              <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Checked Out Today" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" top="-30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                           <font>
+                              <Font size="45.0" />
+                           </font>
                            <HBox.margin>
                               <Insets left="40.0" top="30.0" />
                            </HBox.margin>
                         </JFXButton>
-                        <JFXButton alignment="TOP_CENTER" buttonType="RAISED" prefHeight="150.0" prefWidth="150.0" style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;" text="Maintanence">
+                        <JFXButton contentDisplay="TOP" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #5264AE;" text="NA" textFill="WHITE">
+                           <graphic>
+                              <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Maintanence" textFill="WHITE">
+                                 <padding>
+                                    <Insets bottom="10.0" top="-30.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                           <font>
+                              <Font size="45.0" />
+                           </font>
                            <HBox.margin>
                               <Insets left="30.0" top="30.0" />
                            </HBox.margin>
@@ -81,7 +126,7 @@
                   </HBox>
                   <HBox prefHeight="189.0" prefWidth="409.0">
                      <children>
-                        <LineChart prefHeight="158.0" prefWidth="330.0">
+                        <LineChart fx:id="graphview" prefHeight="158.0" prefWidth="330.0">
                           <xAxis>
                             <CategoryAxis prefHeight="30.0" prefWidth="353.0" side="BOTTOM" tickLabelFill="#006ef4" />
                           </xAxis>
