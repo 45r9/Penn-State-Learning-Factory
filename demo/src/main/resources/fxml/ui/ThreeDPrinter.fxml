@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
+<?import com.jfoenix.controls.JFXTreeTableColumn?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.CategoryAxis?>
@@ -170,7 +171,7 @@
                         <Insets top="20.0" />
                      </VBox.margin>
                   </HBox>
-                  <JFXButton prefHeight="88.0" prefWidth="218.0" style="-fx-background-color: #5264AE;" text="GENERATE REPORT" textFill="WHITE">
+                  <JFXButton fx:id="reportGraph" prefHeight="88.0" prefWidth="218.0" style="-fx-background-color: #5264AE;" text="GENERATE REPORT" textFill="WHITE">
                      <VBox.margin>
                         <Insets left="96.0" top="30.0" />
                      </VBox.margin>
@@ -315,7 +316,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <LineChart prefHeight="258.0" prefWidth="615.0">
+                  <LineChart fx:id="graphview" prefHeight="258.0" prefWidth="615.0">
                     <xAxis>
                       <CategoryAxis side="BOTTOM" />
                     </xAxis>
@@ -323,14 +324,14 @@
                       <NumberAxis side="LEFT" />
                     </yAxis>
                   </LineChart>
-                  <JFXTreeTableView prefHeight="272.0" prefWidth="615.0">
+                  <JFXTreeTableView fx:id="UserTableView" prefHeight="272.0" prefWidth="615.0">
                      <columns>
-                        <TreeTableColumn prefWidth="89.0" text="ASSET NAME" />
-                        <TreeTableColumn prefWidth="113.0" text="CURRENT PERIOD" />
-                        <TreeTableColumn prefWidth="126.0" text="TIME SINCE SERVICE" />
-                        <TreeTableColumn minWidth="5.0" prefWidth="124.0" text="SERVICE INTERVAL" />
-                        <TreeTableColumn prefWidth="105.0" text="TOTAL USEAGE" />
-                        <TreeTableColumn prefWidth="57.0" text="TAG" />
+                        <TreeTableColumn fx:id="assetName" text="ASSET NAME" prefWidth="89.0" />
+                        <TreeTableColumn fx:id="currentPeriod" prefWidth="113.0" text="CURRENT PERIOD" />
+                        <TreeTableColumn fx:id="sinceServiced" prefWidth="126.0" text="TIME SINCE SERVICE" />
+                        <TreeTableColumn fx:id="serviceInt" minWidth="5.0" prefWidth="124.0" text="SERVICE INTERVAL" />
+                        <TreeTableColumn fx:id="usage" prefWidth="105.0" text="TOTAL USEAGE" />
+                        <TreeTableColumn fx:id="tag" prefWidth="57.0" text="TAG" />
                      </columns>
                   </JFXTreeTableView>
                </children>
