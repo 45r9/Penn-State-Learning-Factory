@@ -78,6 +78,46 @@ public class ThreeDPrinterController implements Initializable{
     ComboBox<String> jfxComboBox1;
     ObservableList<String> printerList = FXCollections.observableArrayList();
     
+    @FXML
+    private JFXTreeTableView UserTableView;
+    @FXML
+    private TreeTableColumn<Machine, String> assetName;
+    @FXML
+    private TreeTableColumn<Machine, String> currentPeriod;
+    @FXML
+    private TreeTableColumn<Machine, String> sinceServiced;
+    @FXML
+    private TreeTableColumn<Machine, String> serviceInt;
+    @FXML
+    private TreeTableColumn<Machine, String> usage;	
+    @FXML
+    private TreeTableColumn<Machine, String> tag;
+
+    @PostConstruct
+    public void init() {
+        setupUserTableView();
+    }
+    private <T> void setupCellValueFactory(TreeTableColumn<Machine, T> column, Function<Machine, ObservableValue<T>> mapper) {
+        column.setCellValueFactory((TreeTableColumn.CellDataFeatures<Machine, T> param) -> {
+
+                return mapper.apply(param.getValue().getValue());
+
+    });
+    }
+
+    private void setupUserTableView() {
+        setupCellValueFactory(assetName, Machine::nameProperty);
+        setupCellValueFactory(currentPeriod, Machine::opProperty);
+        setupCellValueFactory(sinceServiced, Machine::serveProperty);
+        setupCellValueFactory(serviceInt, Machine::intProperty);
+        setupCellValueFactory(usage, Machine::useProperty);
+        setupCellValueFactory(tag, Machine::tagProperty);
+
+        ObservableList<Machine> dummyData = generateDummyData();
+        UserTableView.setRoot(new RecursiveTreeItem<>(dummyData, RecursiveTreeObject::getChildren));
+        UserTableView.setShowRoot(false);
+}
+        
     //EventHandler<MouseEvent> onMouseClick = newEventHandler<MouseEvent>()
     //Maybe use a listener?    -> Also a possible solution
     //Multithreading?   -> Possible to implement but difficult
@@ -239,47 +279,6 @@ public class ThreeDPrinterController implements Initializable{
                 seriesdefault.setName("Please select a Printer");
                 break;
         }
-    /**
-        * init fxml when loaded.
-        */
-        @FXML
-        private JFXTreeTableView UserTableView;
-        @FXML
-        private TreeTableColumn<Machine, String> assetName;
-        @FXML
-        private TreeTableColumn<Machine, String> currentPeriod;
-        @FXML
-        private TreeTableColumn<Machine, String> sinceServiced;
-        @FXML
-        private TreeTableColumn<Machine, String> serviceInt;
-        @FXML
-        private TreeTableColumn<Machine, String> usage;	
-        @FXML
-        private TreeTableColumn<Machine, String> tag;
-
-        @PostConstruct
-        public void init() {
-            setupUserTableView();
-        }
-        private <T> void setupCellValueFactory(TreeTableColumn<Machine, T> column, Function<Machine, ObservableValue<T>> mapper) {
-            column.setCellValueFactory((TreeTableColumn.CellDataFeatures<Machine, T> param) -> {
-                
-                    return mapper.apply(param.getValue().getValue());
-
-        });
-        }
-        
-        private void setupUserTableView() {
-            setupCellValueFactory(assetName, Machine::nameProperty);
-            setupCellValueFactory(currentPeriod, Machine::opProperty);
-            setupCellValueFactory(sinceServiced, Machine::serveProperty);
-            setupCellValueFactory(serviceInt, Machine::intProperty);
-            setupCellValueFactory(usage, Machine::useProperty);
-            setupCellValueFactory(tag, Machine::tagProperty);
-            
-            ObservableList<Machine> dummyData = generateDummyData();
-            UserTableView.setRoot(new RecursiveTreeItem<>(dummyData, RecursiveTreeObject::getChildren));
-            UserTableView.setShowRoot(false);
     }
         
     private ObservableList generateDummyData() {
